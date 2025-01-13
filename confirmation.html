@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأكيد الطلب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>تأكيد الطلب</h1>
+    </header>
+    <main>
+        <section id="orderSummary" class="summary-container">
+            <!-- سيتم عرض ملخص الطلب هنا -->
+        </section>
+        <section class="thank-you-section">
+            <p>نشكركم على اختياركم مكتبتنا، ونتمنى أن تكونوا قد استمتعتم بتجربة الشراء لدينا. إذا كان لديكم أي استفسارات أو طلبات، لا تترددوا في التواصل معنا.</p>
+            <p>نتمنى لكم قراءة ممتعة!</p>
+        </section>
+    </main>
+    <footer onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        ↑<p>جميع الحقوق محفوظة © 2024</p>
+    </footer>
+    <script>
+        // استرجاع البيانات من sessionStorage
+        const orderData = JSON.parse(sessionStorage.getItem('orderData'));
+        if (orderData) {
+            const summarySection = document.getElementById('orderSummary');
+            summarySection.innerHTML = `
+                <h2>ملخص الطلب</h2>
+                <p><strong>الاسم الكامل:</strong> ${orderData.fullName}</p>
+                <p><strong>الرقم الوطني:</strong> ${orderData.nationalId}</p>
+                <p><strong>تاريخ الميلاد:</strong> ${orderData.dob}</p>
+                <p><strong>رقم الموبايل:</strong> ${orderData.mobile}</p>
+                <p><strong>الإيميل:</strong> ${orderData.email}</p>
+            `;
+        } else {
+            alert('لا توجد بيانات لعرضها.');
+            window.location.href = './Form.html';
+        }
+    </script>
+</body>
+</html>

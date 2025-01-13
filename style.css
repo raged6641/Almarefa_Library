@@ -1,0 +1,201 @@
+/* تنسيق النصوص والعناوين */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #c7bad1, #9ea3bd); /* تدرج لوني هادئ */
+    color: #52764c; /* لون النص الداكن */
+    direction: rtl;
+}
+
+header {
+    background: linear-gradient(to right, #728ea5, #497887); /* تدرج لوني رائع */
+    color: #ecd4e2; /* لون النص الفاتح */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #38757a; /* لون العنوان الرئيسي */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #376b53; /* لون العناوين الثانوية */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق الأقسام */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    background: #bc874e; /* خلفية القسم بلون دافئ */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق القوائم */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #327168; /* لون النص في القوائم */
+}
+
+/* تنسيق الجدول في صفحة الكتب */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #9ea3bd, #728ea5); /* تدرج لوني للخلفية */
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #376b53; /* لون الحدود */
+}
+
+table th {
+    background: #376b53; /* خلفية رؤوس الجدول */
+    color: #ecd4e2; /* لون النص في رؤوس الجدول */
+}
+
+table td {
+    background: #c7bad1; /* خلفية الخلايا */
+    color: #52764c; /* لون النص */
+}
+
+button.details-btn {
+    background: linear-gradient(45deg, #38757a, #327168); /* تدرج لوني للزر */
+    color: #ecd4e2; /* لون نص الزر */
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+button.details-btn:hover {
+    background: linear-gradient(45deg, #327168, #376b53); /* تدرج أغمق عند التحويم */
+}
+
+/* تنسيق التفاصيل */
+.details {
+    display: none;
+    background: #9ea3bd; /* خلفية تفاصيل داكنة */
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    border-left: 4px solid #bc874e; /* خط جانبي مشرق */
+    color: #52764c; /* لون النص */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* تنسيق النموذج في صفحة Form */
+form {
+    background: linear-gradient(to bottom, #c7bad1, #9ea3bd); /* تدرج في خلفية النموذج */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    display: block;
+    color: #38757a; /* لون النص في التسمية */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    border: 1px solid #376b53; /* لون الحدود */
+    border-radius: 4px;
+    background: #ecd4e2; /* خلفية الإدخال */
+    color: #327168; /* لون النص */
+}
+
+button[type="submit"] {
+    background: linear-gradient(45deg, #bc874e, #52764c); /* تدرج لوني للزر */
+    color: #ecd4e2; /* لون نص الزر */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #52764c, #376b53); /* تدرج أغمق عند التحويم */
+}
+
+/* تنسيق الفوتر */
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #376b53, #327168); /* تدرج لوني للخلفية */
+    color: #ecd4e2; /* لون النص */
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s, transform 0.5s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+footer.visible {
+    opacity: 1;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    button.details-btn {
+        font-size: 0.9rem;
+    }
+}
